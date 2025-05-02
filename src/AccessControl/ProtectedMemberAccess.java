@@ -10,7 +10,7 @@ public class ProtectedMemberAccess extends A {
     public static void main(String[] args) {
         ProtectedMemberAccess a = new ProtectedMemberAccess("Sample text");
         A a2 = new A("Sample text");
-        a
+        System.out.println(a.alphabet);
     }
 
 }
