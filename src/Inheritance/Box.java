@@ -29,14 +29,11 @@ public class Box {
         this.h = h;
     }
 
-
-
     public Box(double h, double w, double l) {
         this.h = h;
         this.w = w;
         this.l = l;
     }
-
 
     public Box(){
     }
