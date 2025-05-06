@@ -1,6 +1,6 @@
 package comparables;
 
-public class Student  implements  Comparable<Student>{
+public class Student  implements  Comparable<Student> , Cloneable{
 
     private String name;
     private int age;
@@ -39,5 +39,17 @@ public class Student  implements  Comparable<Student>{
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+
+    @Override
+    public Student clone() {
+        try {
+            Student clone = (Student) super.clone();
+            // TODO: copy mutable state here, so the clone can't change the internals of the original
+            return clone;
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError();
+        }
     }
 }
